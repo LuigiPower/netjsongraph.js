@@ -1,5 +1,5 @@
 // version 0.1
-export default function netjsonExtend (d3) {
+(function () {
     /**
      * vanilla JS implementation of jQuery.extend()
      */
@@ -298,7 +298,8 @@ export default function netjsonExtend (d3) {
                        .attr("height", height)
                        .call(zoom.on("zoom", opts.redraw))
                        .append("g")
-                       .style("position", "absolute"),
+                       .style("position", "absolute")
+                       .attr("transform", "translate(0, 200) "),
             svg = d3.select(opts.el + " svg"),
             drag = force.drag(),
             overlay = d3.select(opts.el).append("div").attr("class", "njg-overlay"),
@@ -565,4 +566,4 @@ export default function netjsonExtend (d3) {
             });
         }
      };
-}
+})();
