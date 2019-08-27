@@ -1,5 +1,5 @@
 // version 0.1
-(function () {
+export default function netjsonExtend (d3) {
     /**
      * vanilla JS implementation of jQuery.extend()
      */
@@ -565,4 +565,4 @@
             });
         }
      };
-})();
+}
